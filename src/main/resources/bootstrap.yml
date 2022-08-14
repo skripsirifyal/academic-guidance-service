@@ -1,13 +1,7 @@
 ---
-eureka:
-  instance:
-    hostname: academic-guidance-service.herokuapp.com
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    serviceUrl:
-      defaultZone: https://guidance-discovery-service.herokuapp.com/eureka/
 spring:
+  profiles:
+    active: heroku
   cloud:
     config:
       uri: https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
