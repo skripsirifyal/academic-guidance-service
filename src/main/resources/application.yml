@@ -2,26 +2,24 @@ spring:
   application:
     name: academic-guidance-service
   config:
-    activate:
-      on-profile: heroku
     import: optional:config-service:https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
-  cloud:
-    config:
-      uri: https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
-      discovery:
-        enabled: true
-        service-id: config-service
-      fail-fast: true
-      name: academic-guidance-service
-      profile: development
+#  cloud:
+#    config:
+#      uri: https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
+#      discovery:
+#        enabled: true
+#        service-id: config-service
+#      fail-fast: true
+#      name: academic-guidance-service
+#      profile: development
 
-eureka:
-  instance:
-    hostname: academic-guidance-service.herokuapp.com
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    serviceUrl:
-      defaultZone: https://guidance-discovery-service.herokuapp.com/eureka/
-    region: default
-    registry-fetch-interval-seconds: 5
+#eureka:
+#  instance:
+#    hostname: academic-guidance-service.herokuapp.com
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    serviceUrl:
+#      defaultZone: https://guidance-discovery-service.herokuapp.com/eureka/
+#    region: default
+#    registry-fetch-interval-seconds: 5
