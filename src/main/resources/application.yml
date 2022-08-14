@@ -14,14 +14,4 @@ spring:
       profile: development
       username: root
       password: 4c4d3mIc5ec12eT
-
-#eureka:
-#  instance:
-#    hostname: academic-guidance-service.herokuapp.com
-#  client:
-#    fetch-registry: true
-#    register-with-eureka: true
-#    serviceUrl:
-#      defaultZone: https://guidance-discovery-service.herokuapp.com/eureka/
-#    region: default
-#    registry-fetch-interval-seconds: 5
+      label: main
