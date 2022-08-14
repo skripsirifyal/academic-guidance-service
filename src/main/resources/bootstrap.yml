@@ -8,28 +8,27 @@ eureka:
     serviceUrl:
       defaultZone: https://guidance-discovery-service.herokuapp.com/eureka/
 spring:
+  cloud:
+    config:
+      uri: https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
+      discovery:
+        enabled: true
   config:
     activate:
       on-profile: heroku
     import: optional:config-service:https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
-  #  cloud:
-#    config:
-#      server:
-#        git:
-#          uri: https://github.com/skripsirifyal/config-repo
-#          skip-ssl-validation: true
   application:
     name: academic-guidance-service
-  datasource:
-    url: jdbc:postgresql://ec2-44-195-100-240.compute-1.amazonaws.com:5432/d8uf3fitmjh5kd
-    username: pmzwjpdriwfzld
-    password: 83a1b640f1ea8cac5f8e3b34815fb2f22c27179d077bc8b818d0d0706ec743fe
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        hbm2ddl:
-          auto: create-drop
+#  datasource:
+#    url: jdbc:postgresql://ec2-44-195-100-240.compute-1.amazonaws.com:5432/d8uf3fitmjh5kd
+#    username: pmzwjpdriwfzld
+#    password: 83a1b640f1ea8cac5f8e3b34815fb2f22c27179d077bc8b818d0d0706ec743fe
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        hbm2ddl:
+#          auto: create-drop
 #spring.jpa.hibernate.ddl-auto=create-drop
 #springdoc.show-actuator=false
 #spring.jackson.serialization.indent_output=true
