@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: heroku
   application:
     name: academic-guidance-service
   config:
@@ -12,6 +14,8 @@ spring:
         enabled: true
         service-id: config-service
       fail-fast: true
+      name: academic-guidance-service
+      profile: heroku
 
 eureka:
   instance:
