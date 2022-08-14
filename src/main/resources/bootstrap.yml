@@ -1,6 +1,13 @@
+---
 spring:
   application:
     name: academic-guidance-service
+  profiles:
+    active: heroku
+  config:
+    activate:
+      on-profile: heroku
+    import: optional:config-service:https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
   cloud:
     config:
       uri: https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
@@ -8,14 +15,6 @@ spring:
         enabled: true
         service-id: config-service
       fail-fast: true
----
-spring:
-  profiles:
-    active: heroku
-  config:
-    activate:
-      on-profile: heroku
-    import: optional:config-service:https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
 
 eureka:
   instance:
