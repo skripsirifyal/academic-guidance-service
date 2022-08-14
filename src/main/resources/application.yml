@@ -1,8 +1,6 @@
 spring:
   application:
     name: academic-guidance-service
-  config:
-    import: optional:config-service:https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
   cloud:
     config:
       uri: https://guidance-config-service.herokuapp.com/
