@@ -3,15 +3,15 @@ spring:
     name: academic-guidance-service
   config:
     import: optional:config-service:https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
-#  cloud:
-#    config:
-#      uri: https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
-#      discovery:
-#        enabled: true
-#        service-id: config-service
-#      fail-fast: true
-#      name: academic-guidance-service
-#      profile: development
+  cloud:
+    config:
+      uri: https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
+      discovery:
+        enabled: true
+        service-id: config-service
+      fail-fast: true
+      name: academic-guidance-service
+      profile: development
 
 #eureka:
 #  instance:
