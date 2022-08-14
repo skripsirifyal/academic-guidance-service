@@ -12,7 +12,7 @@ spring:
         enabled: true
         service-id: config-service
       fail-fast: true
-      name: academic-guidance-service
+      name: academicguidanceservice
       profile: heroku
 
 eureka:
