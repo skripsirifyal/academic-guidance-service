@@ -11,12 +11,13 @@ spring:
   config:
     activate:
       on-profile: heroku
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/skripsirifyal/config-repo
-          skip-ssl-validation: true
+    import: optional:config-service:https://root:4c4d3mIc5ec12eT@guidance-config-service.herokuapp.com
+  #  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/skripsirifyal/config-repo
+#          skip-ssl-validation: true
   application:
     name: academic-guidance-service
   datasource:
