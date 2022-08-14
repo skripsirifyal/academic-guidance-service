@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: heroku
   application:
     name: academic-guidance-service
   config:
