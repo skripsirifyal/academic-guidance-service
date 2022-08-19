@@ -16,7 +16,7 @@ public class Support implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "support_id")
-    private Integer serviceId;
+    private Integer supportId;
 
     @Column(name = "support_name", nullable = false, length = 100)
     private String supportName;

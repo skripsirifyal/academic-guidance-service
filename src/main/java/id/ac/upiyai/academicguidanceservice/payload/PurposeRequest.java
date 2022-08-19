@@ -7,6 +7,6 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-public class ProposeRequest implements Serializable {
-    private String proposeName;
+public class PurposeRequest implements Serializable {
+    private String purposeName;
 }

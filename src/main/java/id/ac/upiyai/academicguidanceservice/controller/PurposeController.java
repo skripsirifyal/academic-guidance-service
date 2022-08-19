@@ -1,6 +1,6 @@
 package id.ac.upiyai.academicguidanceservice.controller;
 
-import id.ac.upiyai.academicguidanceservice.payload.ProposeRequest;
+import id.ac.upiyai.academicguidanceservice.payload.PurposeRequest;
 import id.ac.upiyai.academicguidanceservice.service.PurposeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +22,7 @@ public class PurposeController {
     }
 
     @PostMapping
-    public ResponseEntity<?> addDataPropose(@Valid @RequestBody ProposeRequest request) {
+    public ResponseEntity<?> addDataPropose(@Valid @RequestBody PurposeRequest request) {
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
 }
