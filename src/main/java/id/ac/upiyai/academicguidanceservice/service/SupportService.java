@@ -5,6 +5,8 @@ import id.ac.upiyai.academicguidanceservice.payload.SupportRequest;
 import id.ac.upiyai.academicguidanceservice.repository.SupportRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SupportService {
 
@@ -19,5 +21,9 @@ public class SupportService {
         support.setSupportName(request.getSupportName());
         support.setIsActive(true);
         repository.save(support);
+    }
+
+    public List<Support> getAllData() {
+        return repository.findAllByIsActive(true);
     }
 }

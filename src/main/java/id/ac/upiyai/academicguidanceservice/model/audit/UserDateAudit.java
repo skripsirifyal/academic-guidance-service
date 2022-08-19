@@ -10,7 +10,6 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @MappedSuperclass
 @Getter
@@ -19,12 +18,11 @@ import java.util.UUID;
 public abstract class UserDateAudit implements Serializable {
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
-    private UUID createdBy;
-    private UUID updatedBy;
+    private String createdBy;
+    private String updatedBy;
 
     @PrePersist
     public void prePersist() {
-//        this.setCreatedBy();
         this.setCreatedDate(LocalDateTime.now());
     }
 

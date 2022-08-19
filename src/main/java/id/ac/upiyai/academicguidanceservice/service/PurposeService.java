@@ -5,6 +5,8 @@ import id.ac.upiyai.academicguidanceservice.payload.PurposeRequest;
 import id.ac.upiyai.academicguidanceservice.repository.PurposeRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PurposeService {
 
@@ -19,5 +21,9 @@ public class PurposeService {
         purpose.setPurposeName(request.getPurposeName());
         purpose.setIsActive(true);
         repository.save(purpose);
+    }
+
+    public List<Purpose> getAllData() {
+        return repository.findAllByIsActive(true);
     }
 }
