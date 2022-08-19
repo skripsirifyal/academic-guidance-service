@@ -28,4 +28,10 @@ public class SupportController {
     public ResponseEntity<?> getAllData() {
         return new ResponseEntity<>(service.getAllData(), HttpStatus.OK);
     }
+
+    @PutMapping
+    public ResponseEntity<?> updateDataSupport(@Valid @RequestBody SupportRequest request) {
+        service.addDataSupport(request);
+        return new ResponseEntity<>("success", HttpStatus.OK);
+    }
 }

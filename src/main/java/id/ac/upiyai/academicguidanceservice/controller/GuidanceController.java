@@ -27,4 +27,9 @@ public class GuidanceController {
     public ResponseEntity<?> getAllData() {
         return new ResponseEntity<>(service.getAllData(), HttpStatus.OK);
     }
+
+    @PutMapping
+    public ResponseEntity<?> updateDataGuidance(@Valid @RequestBody GuidanceRequest request) {
+        return new ResponseEntity<>("success", HttpStatus.OK);
+    }
 }

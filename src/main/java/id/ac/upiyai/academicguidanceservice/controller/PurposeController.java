@@ -28,4 +28,10 @@ public class PurposeController {
     public ResponseEntity<?> getAllData() {
         return new ResponseEntity<>(service.getAllData(), HttpStatus.OK);
     }
+
+    @PutMapping
+    public ResponseEntity<?> updateDataPurpose(@Valid @RequestBody PurposeRequest request) {
+        service.addDataPurpose(request);
+        return new ResponseEntity<>("success", HttpStatus.OK);
+    }
 }
